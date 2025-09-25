@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      background: #f4f6f8;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 15px 0;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .topbar {
+      background: #fff;
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar h1 {
+      font-size: 20px;
+    }
+    .users {
+      flex: 1;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .user-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: transform 0.1s;
+      cursor: pointer;
+    }
+    .user-card:hover {
+      transform: scale(1.02);
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #3498db;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .user-info h3 {
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #2c3e50;
+    }
+    .user-info p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>User Admin</h2>
+    <ul>
+      <li>All Users</li>
+      <li>Admins</li>
+      <li>Managers</li>
+      <li>Employees</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>All Users</h1>
+      <button style="padding:8px 12px; border:none; border-radius:5px; background:#27ae60; color:white; cursor:pointer;">+ Add User</button>
+    </div>
+
+    <div class="users">
+      <div class="user-card">
+        <div class="avatar">SJ</div>
+        <div class="user-info">
+          <h3>Sourabh Jyoti</h3>
+          <p>Admin • sourabh@example.com</p>
+        </div>
+      </div>
+      <div class="user-card">
+        <div class="avatar">AR</div>
+        <div class="user-info">
+          <h3>Aarav R.</h3>
+          <p>Manager • aarav.r@example.com</p>
+        </div>
+      </div>
+      <div class="user-card">
+        <div class="avatar">NK</div>
+        <div class="user-info">
+          <h3>Neha K.</h3>
+          <p>Employee • neha.k@example.com</p>
+        </div>
+      </div>
+      <div class="user-card">
+        <div class="avatar">VM</div>
+        <div class="user-info">
+          <h3>Vikram M.</h3>
+          <p>Employee • vikram.m@example.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
